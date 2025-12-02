@@ -1,4 +1,4 @@
-# 🧠 MLOps Project: House Price Prediction (End-to-End)
+House Price Prediction (End-to-End)
 
 This repository is an end-to-end **MLOps** example that demonstrates:
 - Model training and experiment tracking with **MLflow**
