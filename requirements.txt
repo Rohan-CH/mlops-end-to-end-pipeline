@@ -1,0 +1,11 @@
+numpy
+scikit-learn
+pandas
+mlflow
+joblib
+fastapi
+uvicorn
+dvc
+evidently
+apache-airflow==2.6.3
+pydantic

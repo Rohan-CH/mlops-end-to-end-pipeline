@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: house-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: house-api
+  template:
+    metadata:
+      labels:
+        app: house-api
+    spec:
+      containers:
+      - name: house-api
+        image: house-api:latest
+        ports:
+        - containerPort: 8000
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8000
+          initialDelaySeconds: 15
+          periodSeconds: 20
